@@ -12,8 +12,9 @@ export class AppController {
     .onMessage((msg) => {
       console.log(msg);
     })
-    .onError((err) => {
+    .onError((err, event) => {
       console.log(err);
+      console.log(event);
     })
     .onDisconnected(() => {
       console.log('Socket disconnected');
